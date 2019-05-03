@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-04-2019 a las 20:09:26
+-- Tiempo de generación: 03-05-2019 a las 19:12:23
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -42,9 +42,7 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `nombre_prod`, `codigo_prod`, `cantidad`, `estado`, `fecha_ingreso`) VALUES
-(1, 'ARROZ', '525252', 5, 1, '2019-04-10 17:58:18'),
-(2, 'AZUCAR', '44545', 5, 1, '2019-04-10 17:59:14'),
-(3, 'LENTEJAS', '4545', 5, 1, '2019-04-10 18:02:49');
+(12, 'PAPAS', '123', 5, 1, '2019-05-03 17:06:22');
 
 --
 -- Índices para tablas volcadas
@@ -64,7 +62,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

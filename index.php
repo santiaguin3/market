@@ -28,3 +28,27 @@
 </form>
 </body>
 </html>
+<table border = 1 align = "center">
+  <tr><th>CÒDIGO</th><th>NOMBRE</th><th>CANTIDAD</th><th>.</th><th>..</th></tr>
+
+<?php
+//1. Database connection
+include("database.php");
+//2. Create and execute SQL
+$sql = "SELECT * FROM productos";
+$result = $conn->query($sql);
+//3. Show data
+if($result->num_rows > 0){
+  while($row = $result->fetch_assoc()){
+    echo "<tr>";
+    echo "<td>".$row["codigo_prod"]."</td>";
+    echo "<td>".$row["nombre_prod"]."</td>";
+    echo "<td>".$row["cantidad"]."</td>";
+    echo "<td><a href='delete_product.php?cod=".$row["codigo_prod"]."'><img src='Icons/2.png'width='20'></a></td>";
+    echo "<td><img src='Icons/1.png'width='20'></td>";
+    echo "</tr>";
+  }
+}else{
+  echo "<center>::: No hay productos registrados :::</center><br>";
+}
+?>
